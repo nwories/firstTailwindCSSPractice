@@ -24,23 +24,23 @@
   </head>
   <body>
     <!-- container -->
-    <div class="container max-width: 640px mx-auto px-4">
+    <div class="container sm mx-auto px-4 md:px-20">
       <!-- header -->
       <header class="header py-10 sticky top-0 bg-white">
         <!-- nav bar -->
         <nav class="flex justify-between items-center">
           <div class="logo">
-            <img src="assets/images/logo.svg" alt="logo" class="w-14"/>
+            <img src="assets/images/logo.svg" alt="logo" class="w-14 md:w-full"/>
           </div>
-          <div class="menu-open">
+          <div class="menu-open md:hidden">
             <img
               src="assets/images/icon-menu.svg"
               alt="menu-open-bar"
               />
             </div>
-            <div class="overlay absolute h-screen w-full right-1/4 top-0 bg-gray-100 bg-opacity-70 hidden"></div>
-            <div class="mobile-menu bg-white absolute right-0 w-9/12 top-0 h-screen hidden">
-                <div class="menu-close relative top-9 left-80">
+            <!-- mobile menu link -->
+            <div class="mobile-menu bg-white absolute z-10 top-0 h-screen hidden">
+              <div class="menu-close relative top-9">
                     <img src="assets/images/icon-menu-close.svg" alt="menu-close-button">
                 </div>
                 <ul class="relative top-48 left-8 text-2xl font-medium">
@@ -50,34 +50,45 @@
                     <li class="my-8"><a href="#">Trending</a></li>
                     <li><a href="#">Categories</a></li>
               </ul>
-          </div>
-        </nav>
+            </div>
+            <!-- desktop menu links -->
+            <ul class="hidden md:flex md:gap-20 md:items-center md:text-2xl md:font-medium">
+                <li><a href="#" class="hover:text-red-500">Home</a></li>
+                <li class="my-8"><a href="#" class="hover:text-red-500">New</a></li>
+                <li class="my-8"><a href="#" class="hover:text-red-500">Popular</a></li>
+                <li class="my-8"><a href="#" class="hover:text-red-500">Trending</a></li>
+                <li><a href="#" class="hover:text-red-500">Categories</a></li>
+          </ul>
+          </nav>
       </header>
       <!-- end of header -->
 
       <!-- main -->
       <main class="main">
-        <!-- web-3 section -->
-        <section class="web-3">
+        <!-- first two section -->
+         <div class="md:flex md:flex-row md:gap-10">
+          <!-- web-3 section -->
+        <section class="web-3 md:w-8/12">
             <div>
               <!-- mobile image -->
             <img
               src="assets/images/image-web-3-mobile.jpg"
               alt="image-web 3-mobile"
+              class="w-full md:hidden"
             />
             <!-- desktop image -->
             <img
               src="assets/images/image-web-3-desktop.jpg"
               alt="image-web-3-desktop"
-              class="hidden"
+              class="hidden md:block w-full"
             />
           </div>
 
           <!-- web 3 article -->
-          <div class="web-3-article">
-            <h1 class="text-7xl font-extrabold my-12">The Bright Future of Web 3.0?</h1>
+          <div class="web-3-article grid grid-col-1 md:flex md:gap-10">
+            <h1 class="text-6xl md:text-5xl font-extrabold my-12 tracking-wide">The Bright Future of Web 3.0?</h1>
             <div class="text-xl leading-10">
-              <p>
+              <p class="md:mt-12">
                 We dive into the next evolution of the web that claims to put
                 the power of the platforms back into the hands of the people.
                 But is it really fulfilling its promise?
@@ -93,7 +104,7 @@
         <!-- end of web-3 section -->
 
         <!-- news section -->
-        <section class="news bg-indigo-900 p-7 text-white my-16 text-xl">
+        <section class="news bg-indigo-900 p-7 text-white my-16 text-xl md:mt-0 md:w-4/12">
           <h1 class="text-yellow-500 text-5xl font-bold mb-10">New</h1>
 
           <!-- article 1 -->
@@ -102,7 +113,7 @@
             <p class="leading-10 text-gray-300">Will hydrogen-fueled cars ever catch up to EVs?</p>
           </article>
           <div class="line h-px w-full bg-gray-300 my-12"></div>
-
+          
           <!-- article 2 -->
           <article>
             <h2 class="text-2xl font-bold my-1">The Downsides of AI Artistry</h2>
@@ -123,20 +134,21 @@
           </article>
         </section>
         <!-- end of news section -->
+         </div>
 
         <!-- advert section -->
-        <section class="advert-section">
+        <section class="advert-section grid grid-cols-1 md:flex w-full">
           <!-- advert 1 -->
           <div class="advert flex items-center gap-10 mb-12">
             <div class="advert-img">
               <img
-                src="assets/images/image-retro-pcs.jpg"
-                alt="Reviving Rectro PCs"
+              src="assets/images/image-retro-pcs.jpg"
+              alt="Reviving Rectro PCs"
               />
             </div>
             <div class="advert-article">
-              <h1 class="text-red-500 text-5xl font-bold mb-3">01</h1>
-              <a href="#" class="font-bold text-xl">Reviving Retro PCs</a>
+              <h1 class="text-red-500 text-3xl font-bold mb-3">01</h1>
+              <a href="#" class="font-bold text-xl hover:text-red-500">Reviving Retro PCs</a>
               <p class="leading-8 mt-3">What happens when old PCs are given modern upgrades?</p>
             </div>
           </div>
@@ -150,8 +162,8 @@
               />
             </div>
             <div class="advert-article">
-              <h1 class="text-red-500 text-5xl font-bold mb-3">02</h1>
-              <a href="#" class="font-bold text-xl">Top 10 Laptops of 2022</a>
+              <h1 class="text-red-500 text-3xl font-bold mb-3">02</h1>
+              <a href="#" class="font-bold text-xl hover:text-red-500">Top 10 Laptops of 2022</a>
               <p class="leading-8 mt-3">Our best picks for various needs and budgets.</p>
             </div>
           </div>
@@ -160,21 +172,21 @@
           <div class="advert flex items-center gap-10 mb-12">
             <div class="advert-img">
               <img
-                src="assets/images/image-gaming-growth.jpg"
-                alt="The Growth of Gaming"
+              src="assets/images/image-gaming-growth.jpg"
+              alt="The Growth of Gaming"
               />
             </div>
             <div class="advert-article">
-              <h1 class="text-red-500 text-5xl font-bold mb-3">03</h1>
-              <a href="#" class="font-bold text-xl">The Growth of Gaming</a>
+              <h1 class="text-red-500 text-3xl font-bold mb-3">03</h1>
+              <a href="#" class="font-bold text-xl hover:text-red-500">The Growth of Gaming</a>
               <p class="leading-8 mt-3">How the pandemic has sparked fresh opportunities.</p>
             </div>
           </div>
         </section>
-        <!-- end of advert section -->
-
-        <!-- overlay -->
+        <!-- end of advert section --> 
       </main>
+      <!-- overlay -->
+      <div class="overlay absolute h-screen w-full right-0 top-0 bg-gray-100 bg-opacity-70 z-0 hidden"></div>
     </div>
 
     <!-- javascript linking -->

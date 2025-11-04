@@ -7,6 +7,7 @@ const overlay = document.querySelector('.overlay');
 const openMenu = () => {
     mobile_menu.style.display = 'block';
     overlay.style.display = 'block';
+    mobile_menu.style.width = '20%'
 }
 
 // function to close menu 
