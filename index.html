@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon link -->
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style/style.css">
+    <!-- CSS -->
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        .container{
+            font-family: "Inter", sans-serif;
+        }
+     </style>
+     <!-- TAILWIND CSS LINK -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body>
+    <!-- container -->
+    <div class="container max-width: 640px mx-auto px-4">
+      <!-- header -->
+      <header class="header py-10 sticky top-0 bg-white">
+        <!-- nav bar -->
+        <nav class="flex justify-between items-center">
+          <div class="logo">
+            <img src="assets/images/logo.svg" alt="logo" class="w-14"/>
+          </div>
+          <div class="menu-open">
+            <img
+              src="assets/images/icon-menu.svg"
+              alt="menu-open-bar"
+              />
+            </div>
+            <div class="overlay absolute h-screen w-full right-1/4 top-0 bg-gray-100 bg-opacity-70 hidden"></div>
+            <div class="mobile-menu bg-white absolute right-0 w-9/12 top-0 h-screen hidden">
+                <div class="menu-close relative top-9 left-80">
+                    <img src="assets/images/icon-menu-close.svg" alt="menu-close-button">
+                </div>
+                <ul class="relative top-48 left-8 text-2xl font-medium">
+                    <li><a href="#">Home</a></li>
+                    <li class="my-8"><a href="#">New</a></li>
+                    <li class="my-8"><a href="#">Popular</a></li>
+                    <li class="my-8"><a href="#">Trending</a></li>
+                    <li><a href="#">Categories</a></li>
+              </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- end of header -->
+
+      <!-- main -->
+      <main class="main">
+        <!-- web-3 section -->
+        <section class="web-3">
+            <div>
+              <!-- mobile image -->
+            <img
+              src="assets/images/image-web-3-mobile.jpg"
+              alt="image-web 3-mobile"
+            />
+            <!-- desktop image -->
+            <img
+              src="assets/images/image-web-3-desktop.jpg"
+              alt="image-web-3-desktop"
+              class="hidden"
+            />
+          </div>
+
+          <!-- web 3 article -->
+          <div class="web-3-article">
+            <h1 class="text-7xl font-extrabold my-12">The Bright Future of Web 3.0?</h1>
+            <div class="text-xl leading-10">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <!-- read more button -->
+              <div class="btn bg-red-500 tracking-widest w-72 text-xl text-center font-bold px-3 py-5 my-10">
+                <a href="#">READ MORE</a>
+              </div>
+            </div>
+          </div>
+          <!-- end of web-3-article -->
+        </section>
+        <!-- end of web-3 section -->
+
+        <!-- news section -->
+        <section class="news bg-indigo-900 p-7 text-white my-16 text-xl">
+          <h1 class="text-yellow-500 text-5xl font-bold mb-10">New</h1>
+
+          <!-- article 1 -->
+          <article>
+            <h2 class="text-2xl font-bold my-1">Hydrogen VS Electric Cars</h2>
+            <p class="leading-10 text-gray-300">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </article>
+          <div class="line h-px w-full bg-gray-300 my-12"></div>
+
+          <!-- article 2 -->
+          <article>
+            <h2 class="text-2xl font-bold my-1">The Downsides of AI Artistry</h2>
+            <p class="leading-10 text-gray-300">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </article>
+          <div class="line h-px w-full bg-gray-300 my-12"></div>
+
+          <!-- article 3 -->
+          <article>
+            <h2 class="text-2xl font-bold my-1">Is VC Funding Drying Up?</h2>
+            <p class="leading-10 text-gray-300">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </article>
+        </section>
+        <!-- end of news section -->
+
+        <!-- advert section -->
+        <section class="advert-section">
+          <!-- advert 1 -->
+          <div class="advert flex items-center gap-10 mb-12">
+            <div class="advert-img">
+              <img
+                src="assets/images/image-retro-pcs.jpg"
+                alt="Reviving Rectro PCs"
+              />
+            </div>
+            <div class="advert-article">
+              <h1 class="text-red-500 text-5xl font-bold mb-3">01</h1>
+              <a href="#" class="font-bold text-xl">Reviving Retro PCs</a>
+              <p class="leading-8 mt-3">What happens when old PCs are given modern upgrades?</p>
+            </div>
+          </div>
+
+          <!-- advert 2 -->
+          <div class="advert flex items-center gap-10 mb-12">
+            <div class="advert-img">
+              <img
+                src="assets/images/image-top-laptops.jpg"
+                alt="Top 10 Laptops of 2022"
+              />
+            </div>
+            <div class="advert-article">
+              <h1 class="text-red-500 text-5xl font-bold mb-3">02</h1>
+              <a href="#" class="font-bold text-xl">Top 10 Laptops of 2022</a>
+              <p class="leading-8 mt-3">Our best picks for various needs and budgets.</p>
+            </div>
+          </div>
+
+          <!-- advert 3 -->
+          <div class="advert flex items-center gap-10 mb-12">
+            <div class="advert-img">
+              <img
+                src="assets/images/image-gaming-growth.jpg"
+                alt="The Growth of Gaming"
+              />
+            </div>
+            <div class="advert-article">
+              <h1 class="text-red-500 text-5xl font-bold mb-3">03</h1>
+              <a href="#" class="font-bold text-xl">The Growth of Gaming</a>
+              <p class="leading-8 mt-3">How the pandemic has sparked fresh opportunities.</p>
+            </div>
+          </div>
+        </section>
+        <!-- end of advert section -->
+
+        <!-- overlay -->
+      </main>
+    </div>
+
+    <!-- javascript linking -->
+     <script src="js/index.js"></script>
+  </body>
+</html>
